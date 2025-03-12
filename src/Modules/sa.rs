@@ -1,4 +1,6 @@
 use rand::Rng;
+
+//Es un ejemplo de funcion
 fn func_objetivo(x: f64) -> f64 {
     x.powi(2) + 4.0 * (5.0 * x).sin() //Funcion a minimizar
 }
@@ -30,3 +32,13 @@ pub fn recocido_simulado(
 
     (x_actual, func_objetivo(x_actual))
 }
+/* 
+¿Cómo elegir una función objetivo?
+
+    Función cuadrática: Útil para problemas de optimización simples.
+    Rosenbrock: Muy usada en pruebas de algoritmos de optimización, especialmente para métodos de optimización no lineales.
+    Oscilaciones (seno/coseno): Funciones con muchos máximos y mínimos locales.
+    Valor absoluto: Problemas donde la solución mínima se encuentra en un punto de cambio abrupto (por ejemplo, el cero).
+
+
+*/
