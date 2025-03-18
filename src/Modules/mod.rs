@@ -1,7 +1,11 @@
 pub mod arima;
 pub mod arima_eval;
-pub mod comodo_cons_en;
 pub mod data_struct;
 pub mod data_structs;
+pub mod energia;
+pub mod graph;
+pub mod iqr;
+pub mod matrix;
+pub mod normalizacion;
 pub mod sa;
 pub mod satisfaccion;

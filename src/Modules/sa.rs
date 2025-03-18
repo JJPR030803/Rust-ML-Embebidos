@@ -32,7 +32,7 @@ pub fn recocido_simulado(
 
     (x_actual, func_objetivo(x_actual))
 }
-/* 
+/*
 ¿Cómo elegir una función objetivo?
 
     Función cuadrática: Útil para problemas de optimización simples.

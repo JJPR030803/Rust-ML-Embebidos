@@ -1,4 +1,3 @@
-//Que tan comodo estamos en base al consumo de energia con la configuracion dada
 use super::data_structs::Energia;
 
 impl Energia {
