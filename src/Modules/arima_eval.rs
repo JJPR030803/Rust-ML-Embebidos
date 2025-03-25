@@ -1,5 +1,3 @@
-use super::data_struct::Data;
-
 /// Calcula los valores ponderados entre valores predichos y actuales
 ///
 /// Parameters:

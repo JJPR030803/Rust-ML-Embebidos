@@ -1,0 +1,44 @@
+
+### Conceptual Overview
+
+1. **State**: The temperature setting
+2. **Energy function**: A combination of cost and dissatisfaction
+3. **Temperature parameter**: Controls how likely you are to accept worse solutions
+
+### Step-by-Step Approach
+
+1. **Define your objective function**:
+   - Cost component: 10 pesos per degree change
+   - Satisfaction component: How far the temperature is from what the user wants
+   - Combined function: `total_cost = change_cost + dissatisfaction_penalty`
+
+2. **Initialize the algorithm**:
+   - Start with the current temperature (e.g., 25.0)
+   - Set an initial "temperature" parameter for the algorithm (unrelated to actual temperature)
+
+3. **Iterative process**:
+   - Generate a neighbor solution (small random change to current temperature)
+   - Calculate the cost difference between current and neighbor solutions
+   - Accept better solutions always
+   - Accept worse solutions with a probability based on how much worse they are and the current "temperature" parameter
+   - Gradually decrease the "temperature" parameter (cooling schedule)
+
+4. **Example for your specific case**:
+   - Starting at 25.0, user wants 22.0
+   - Each iteration might try temperatures like 24.8, 24.5, etc.
+   - As the algorithm progresses, it becomes less likely to accept temperatures that move away from the optimal solution
+
+### Balancing Factors
+
+For your specific problem:
+- The cost of change (10 pesos per degree) creates pressure to minimize change
+- The user preference (22.0 today) creates pressure to change despite the cost
+- The algorithm will find a balance that minimizes total dissatisfaction + cost
+
+### Implementation Considerations
+
+- You'll need to weight the satisfaction component appropriately
+- The cooling schedule (how quickly you reduce the "temperature" parameter) affects how thoroughly the algorithm explores the solution space
+- Multiple runs with different starting points might help ensure you find the global optimum
+
+This approach can easily extend to multiple variables (temperature, humidity, etc.) by making your state a vector and adjusting your energy function accordingly.

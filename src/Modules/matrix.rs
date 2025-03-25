@@ -1,8 +1,5 @@
-use std::arch::x86_64::_SIDD_CMP_RANGES;
-
 use rand::Rng;
-use rand::distr::{Distribution, Uniform};
-use statrs::distribution;
+use rand::distr::Uniform;
 pub struct Matrix {
     pub rows: usize,
     pub cols: usize,

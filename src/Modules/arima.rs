@@ -1,4 +1,3 @@
-use super::data_struct::{Data, extract_series, read_csv};
 use nalgebra::{DMatrix, DVector};
 use statrs::distribution::{ContinuousCDF, Normal};
 use std::error::Error;

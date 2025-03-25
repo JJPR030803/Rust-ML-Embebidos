@@ -1,0 +1,2 @@
+actualizar Arima
+implementar funcion de annealing con satisfaccion (obtener el mejor resultado)
